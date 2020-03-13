@@ -1,0 +1,15 @@
+COPYING
+Config.pm
+Iterator.pm
+Makefile.PL
+MANIFEST
+README
+test.pl
+etc/aoa.conf
+etc/array.conf
+etc/arrays.conf
+etc/hash.conf
+etc/hashes.conf
+etc/hoh.conf
+etc/users.conf
+etc/spaces.conf
