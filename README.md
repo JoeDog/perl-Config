@@ -23,6 +23,7 @@ problem with this installation as it will be familiar:
   $ make install  
 
 USAGE  
+```perl
 use JoeDog::Config;  
 my $cnf = new JoeDog::Config(filename);  
 my @array  = $cnf->get_column();  
@@ -31,6 +32,7 @@ my @aoa    = $cnf->get_table(sep,num);
 my @aoa    = $cnf->get_table(sep,[num1, num2, etc...]);  
 my %hash   = $cnf->get_hash(sep);  
 my %hashes = $cnf->get_hashes(sep);  
+```
 
 For greater detail, see: perldoc JoeDog::Config.pm  
 
