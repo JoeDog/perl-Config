@@ -3,7 +3,7 @@ package JoeDog::Config;
 use strict;
 use vars qw($VERSION $LOCK_EX $LOCK_UN);
 
-$VERSION = '2.05';
+$VERSION = '2.0.6';
 $LOCK_EX = 2;
 $LOCK_UN = 8;
 
