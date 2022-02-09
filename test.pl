@@ -37,7 +37,7 @@ END   { print "not ok $test\n" unless $loaded; }
   $loaded = 0;
   use JoeDog::Config;
 
-  my $conf = new JoeDog::Config("etc/array.conf");
+  my $conf = new JoeDog::Config("examples/array.conf");
   $conf->set_debug() if $debug;
 
   my @array  = $conf->get_column();
@@ -56,7 +56,7 @@ END   { print "not ok $test\n" unless $loaded; }
   $loaded = 0;
   use JoeDog::Config;
 
-  my $conf = new JoeDog::Config('etc/arrays.conf');
+  my $conf = new JoeDog::Config('examples/arrays.conf');
   $conf->set_debug() if $debug;
 
   my @arrays = $conf->get_columns("=");
@@ -72,7 +72,7 @@ END   { print "not ok $test\n" unless $loaded; }
 {
   $test   = 4;
   $loaded = 0;
-  my $conf = new JoeDog::Config("etc/hash.conf");
+  my $conf = new JoeDog::Config("examples/hash.conf");
   $conf->set_debug() if $debug;
 
   my %conf = $conf->get_hash("|");
@@ -90,7 +90,7 @@ END   { print "not ok $test\n" unless $loaded; }
   $loaded = 0;
   use JoeDog::Config;
 
-  my $config = new JoeDog::Config('etc/hashes.conf');
+  my $config = new JoeDog::Config('examples/hashes.conf');
   my %hashes = $config->get_ini('=');
  
   # access and print the data. In this example, we sort the
@@ -110,7 +110,7 @@ END   { print "not ok $test\n" unless $loaded; }
   $loaded = 0;
   use JoeDog::Config;
 
-  my $cnf = new JoeDog::Config('etc/aoa.conf');
+  my $cnf = new JoeDog::Config('examples/aoa.conf');
   $cnf->set_debug() if $debug;
 
   my @aoa = $cnf->get_table('|', 1, 4);
@@ -130,7 +130,7 @@ END   { print "not ok $test\n" unless $loaded; }
   $loaded = 0;
   use JoeDog::Config;
 
-  my $cnf  = new JoeDog::Config('etc/array.conf');
+  my $cnf  = new JoeDog::Config('examples/array.conf');
   $cnf->set_debug() if $debug;
 
   my %hash = $cnf->get_distribution();
@@ -149,7 +149,7 @@ END   { print "not ok $test\n" unless $loaded; }
   my $line = "";
   use JoeDog::Config::Iterator;
 
-  for(my $conf = new JoeDog::Config::Iterator('etc/aoa.conf'); $conf->more(); $conf->next()){
+  for(my $conf = new JoeDog::Config::Iterator('examples/aoa.conf'); $conf->more(); $conf->next()){
     $line .= ($conf->cols('|'))[2];
   }
   print $line . "\n" if $test[$test-1];
@@ -160,7 +160,7 @@ END   { print "not ok $test\n" unless $loaded; }
 {
   $test    = 9;
   $loaded  = 0;
-  my $conf = new JoeDog::Config("etc/users.conf");
+  my $conf = new JoeDog::Config("examples/users.conf");
   $conf->set_debug() if $debug;
 
   my %hash = $conf->get_ini("=");
@@ -178,7 +178,7 @@ END   { print "not ok $test\n" unless $loaded; }
 {
   $test    = 10;
   $loaded  = 0;
-  my $conf = new JoeDog::Config("etc/spaces.conf");
+  my $conf = new JoeDog::Config("examples/spaces.conf");
   $conf->set_debug() if $debug;
 
   my @cols = $conf->get_columns(qr/\s{2,}/);
@@ -192,7 +192,7 @@ END   { print "not ok $test\n" unless $loaded; }
 {
   $test   = 11;
   $loaded = 0;
-  my $cnf = new JoeDog::Config("etc/hoh.conf");
+  my $cnf = new JoeDog::Config("examples/hoh.conf");
   $cnf->set_debug() if $debug;
   $cnf->set_key(1, "Aces");
   $cnf->set_key(2, "Faults");
