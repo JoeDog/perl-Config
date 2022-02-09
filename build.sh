@@ -5,6 +5,7 @@ version=2.0.6
 mkdir -p JoeDog-Config-$version
 perl Makefile.PL INSTALLDIRS=vendor
 make
+make test
 make install DESTDIR=JoeDog-Config-$version
 rm -Rf JoeDog-Config-2.0.6/usr/lib64
 
