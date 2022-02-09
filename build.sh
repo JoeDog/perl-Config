@@ -1,6 +1,7 @@
 #!/bin/sh
 
 version=2.0.6
+
 mkdir -p JoeDog-Config-$version
 perl Makefile.PL INSTALLDIRS=vendor
 make
