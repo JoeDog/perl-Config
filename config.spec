@@ -3,7 +3,7 @@
 Name:      JoeDog-Config
 Summary:   A perl config file parser
 Version:   2.0.6
-Release:   8
+Release:   8%{dist}
 BuildArch: noarch
 Group:     Programming
 License:   GPL
