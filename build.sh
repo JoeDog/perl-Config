@@ -12,3 +12,5 @@ rm -Rf JoeDog-Config-2.0.6/usr/lib64
 tar -cvf - JoeDog-Config-$version | gzip -f > JoeDog-Config-$version.tar.gz
 mv JoeDog-Config-$version.tar.gz /usr/src/redhat/SOURCES
 rpmbuild -ba -v config.spec
+rm -Rf ./JoeDog-Config-$version
+
